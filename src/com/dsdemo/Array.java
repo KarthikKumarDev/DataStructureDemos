@@ -33,11 +33,21 @@ public class Array {
             throw new IllegalArgumentException();
         }
 
-        for (int i = index; i < count -1; i++){
-            items[i] = items[i+1];
+        for (int i = index; i < count - 1; i++) {
+            items[i] = items[i + 1];
         }
         count--;
         resizeArray(-1);
+    }
+
+    public int indexOf(int item) {
+        for (int i = 0; i < count; i++){
+            if(item == items[i]){
+                return i;
+            }
+        }
+
+        return -1;
     }
 
     public void print() {
