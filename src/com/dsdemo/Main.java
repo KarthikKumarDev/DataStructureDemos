@@ -7,5 +7,9 @@ public class Main {
         numbers.insert(3);
         numbers.insert(4);
         numbers.print();
+        System.out.println("-----");
+        numbers.removeAt(0);
+        numbers.insert(5);
+        numbers.print();
     }
 }
