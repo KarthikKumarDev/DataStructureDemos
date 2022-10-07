@@ -67,9 +67,12 @@ public class Main {
         System.out.println("<>");
         numbers.print();
 
+        System.out.println("-----");
 
-
-
-
+        // Exercise 4 insertAt
+        numbers.insertAt(10,1);
+        numbers.insertAt(11,1);
+        System.out.println("Inserted at:");
+        numbers.print();
     }
 }

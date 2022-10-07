@@ -70,15 +70,29 @@ public class Array {
         return intersection;
     }
 
-    public void reverse(){
+    public void reverse() {
         int[] reversed = new int[count];
 
-        for (int i =0; i < count; i++){
-            reversed[count-i-1] = items[i];
+        for (int i = 0; i < count; i++) {
+            reversed[count - i - 1] = items[i];
         }
 
         items = reversed;
     }
+
+    public void insertAt(int item, int index) {
+        if (index < 0 || index > count)
+            throw new IllegalArgumentException();
+
+        resizeArray(1);
+        count++;
+        for (int i = count - 1; i >= index; i--) {
+            items[i] = items[i-1];
+        }
+
+        items[index] = item;
+    }
+
     public void print() {
         for (int i = 0; i < count; i++) {
             System.out.println(items[i]);
