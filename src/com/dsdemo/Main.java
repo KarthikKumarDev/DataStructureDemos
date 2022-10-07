@@ -7,7 +7,7 @@ public class Main {
         arrayOPS();
     }
 
-    public static void arrayOPS(){
+    public static void arrayOPS() {
         Array numbers = new Array(2);
         numbers.insert(1);
         numbers.insert(3);
@@ -40,6 +40,36 @@ public class Main {
 
         list.remove(2);
         System.out.println(list);
+
+        System.out.println("-----");
+
+        // Exercise 1
+        System.out.println("Max is " + numbers.max());
+
+        System.out.println("-----");
+
+        // Exercise 2 Intersection
+        Array second = new Array(2);
+        second.insert(3);
+        second.insert(6);
+
+        Array intersection = numbers.intersect(second);
+
+        System.out.printf("Intersection: ");
+        intersection.print();
+
+        System.out.println("-----");
+
+        // Exercise 3 Reverse
+
+        numbers.print();
+        numbers.reverse();
+        System.out.println("<>");
+        numbers.print();
+
+
+
+
 
     }
 }

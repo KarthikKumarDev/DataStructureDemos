@@ -41,8 +41,8 @@ public class Array {
     }
 
     public int indexOf(int item) {
-        for (int i = 0; i < count; i++){
-            if(item == items[i]){
+        for (int i = 0; i < count; i++) {
+            if (item == items[i]) {
                 return i;
             }
         }
@@ -50,6 +50,35 @@ public class Array {
         return -1;
     }
 
+    public int max() {
+        int max = 0;
+        for (int i = 0; i < count; i++) {
+            if (items[i] > max) {
+                max = items[i];
+            }
+        }
+        return max;
+    }
+
+    public Array intersect(Array second) {
+        var intersection = new Array(count);
+
+        for (int item : items)
+            if (second.indexOf(item) >= 0)
+                intersection.insert(item);
+
+        return intersection;
+    }
+
+    public void reverse(){
+        int[] reversed = new int[count];
+
+        for (int i =0; i < count; i++){
+            reversed[count-i-1] = items[i];
+        }
+
+        items = reversed;
+    }
     public void print() {
         for (int i = 0; i < count; i++) {
             System.out.println(items[i]);
