@@ -1,10 +1,13 @@
 package com.dsdemo;
 
 import java.util.ArrayList;
+//import java.util.Arrays;
+//import java.util.LinkedList;
 
 public class Main {
     public static void main(String[] names) {
-        arrayOPS();
+        // arrayOPS();
+        linkedList();
     }
 
     public static void arrayOPS() {
@@ -70,9 +73,32 @@ public class Main {
         System.out.println("-----");
 
         // Exercise 4 insertAt
-        numbers.insertAt(10,1);
-        numbers.insertAt(11,1);
+        numbers.insertAt(10, 1);
+        numbers.insertAt(11, 1);
         System.out.println("Inserted at:");
         numbers.print();
+    }
+
+    public static void linkedList() {
+//        LinkedList llist = new LinkedList();
+//        llist.add(10);
+//        llist.add(20);
+//        llist.add(30);
+//
+//        System.out.println(llist);
+//        System.out.println(llist.contains(10));
+//        System.out.println(llist.indexOf(20));
+//        System.out.println(llist.size());
+//
+//        var array= llist.toArray();
+//        System.out.println(Arrays.toString(array));
+
+        var llist = new LinkedList();
+        llist.addLast(10);
+        llist.addLast(20);
+        llist.addLast(30);
+
+        llist.print();
+
     }
 }
