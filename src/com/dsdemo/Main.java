@@ -100,5 +100,41 @@ public class Main {
 
         llist.print();
 
+        System.out.println("-----");
+
+        llist.addFirst(100);
+        llist.print();
+
+        System.out.println("-----");
+
+        System.out.println("IndexOf: 10 and 200 ");
+        System.out.println(llist.indexOf(10));
+        System.out.println(llist.indexOf(200));
+
+        System.out.println("-----");
+
+        System.out.println("Contains: 10 and 200 ");
+        System.out.println(llist.contains(10));
+        System.out.println(llist.contains(200));
+
+        System.out.println("-----");
+        llist.print();
+
+        System.out.println("Remove First");
+        llist.removeFirst();
+        llist.print();
+
+        System.out.println("-----");
+        llist.print();
+
+        System.out.println("Remove Last");
+        llist.removeLast();
+        llist.print();
+
+        System.out.println("-----");
+        System.out.println("Size of LinkedList");
+        System.out.println(llist.size());
+
+
     }
 }
