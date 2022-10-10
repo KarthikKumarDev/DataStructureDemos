@@ -40,12 +40,12 @@ public class LinkedList {
 
     public int indexOf(int value) {
         int index = 0;
-        Node traverse = first;
-        while (traverse != null) {
-            if (traverse.value == value) {
+        Node traverser = first;
+        while (traverser != null) {
+            if (traverser.value == value) {
                 return index;
             }
-            traverse = traverse.next;
+            traverser = traverser.next;
             index++;
         }
 
@@ -102,11 +102,11 @@ public class LinkedList {
     }
 
     public void print() {
-        Node traverse = first;
+        Node traverser = first;
 
-        while (traverse != null) {
-            System.out.println(traverse.value);
-            traverse = traverse.next;
+        while (traverser != null) {
+            System.out.println(traverser.value);
+            traverser = traverser.next;
         }
     }
 }
