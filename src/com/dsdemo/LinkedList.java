@@ -18,7 +18,7 @@ public class LinkedList {
 
     public void addLast(int value) {
         Node newNode = new Node(value);
-        if (first == null) {
+        if (isEmpty()) {
             first = last = newNode;
         } else {
             last.next = newNode;
@@ -29,7 +29,7 @@ public class LinkedList {
 
     public void addFirst(int value) {
         Node newNode = new Node(value);
-        if (first == null) {
+        if (isEmpty()) {
             first = last = newNode;
         } else {
             newNode.next = first;
@@ -57,7 +57,7 @@ public class LinkedList {
     }
 
     public void removeFirst() {
-        if (first == null) {
+        if (isEmpty()) {
             throw new NoSuchElementException();
         } else if (first == last) {
             first = last = null;
@@ -83,7 +83,7 @@ public class LinkedList {
     }
 
     public void removeLast() {
-        if (first == null) {
+        if (isEmpty()) {
             throw new NoSuchElementException();
         } else if (first == last) {
             first = last = null;
@@ -99,6 +99,10 @@ public class LinkedList {
 
     public int size(){
         return size;
+    }
+
+    public boolean isEmpty(){
+        return first == null;
     }
 
     public void print() {
