@@ -140,5 +140,13 @@ public class Main {
         System.out.println("To Array");
         System.out.println(Arrays.toString(llist.toArray()));
 
+        System.out.println("-----");
+        System.out.println("Reverse Linked List");
+
+        llist.addLast(30);
+        llist.addLast(40);
+        llist.reverse();
+        llist.print();
+
     }
 }

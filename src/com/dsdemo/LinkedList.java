@@ -118,6 +118,22 @@ public class LinkedList {
         return array;
     }
 
+    public void reverse(){
+        Node previous = first;
+        Node current = first.next;
+
+        while(current !=null){
+            var next = current.next;
+            current.next = previous;
+            previous = current;
+            current = next;
+        }
+
+        last = first;
+        last.next = null;
+        first = previous;
+    }
+
     public void print() {
         Node traverser = first;
 
