@@ -105,6 +105,19 @@ public class LinkedList {
         return first == null;
     }
 
+    public int[] toArray(){
+        var traverser = first;
+        int[] array = new int[size];
+        var index = 0;
+
+        while (traverser != null){
+            array[index++] = traverser.value;
+            traverser = traverser.next;
+        }
+
+        return array;
+    }
+
     public void print() {
         Node traverser = first;
 

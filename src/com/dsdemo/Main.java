@@ -1,6 +1,7 @@
 package com.dsdemo;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 //import java.util.Arrays;
 //import java.util.LinkedList;
 
@@ -135,6 +136,9 @@ public class Main {
         System.out.println("Size of LinkedList");
         System.out.println(llist.size());
 
+        System.out.println("-----");
+        System.out.println("To Array");
+        System.out.println(Arrays.toString(llist.toArray()));
 
     }
 }
