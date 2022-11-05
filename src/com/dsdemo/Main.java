@@ -148,5 +148,9 @@ public class Main {
         llist.reverse();
         llist.print();
 
+        System.out.println("-----");
+        System.out.println("Find Kth Node from end");
+        System.out.println(llist.findKthNodeFromEnd(3));
+        System.out.println(llist.findKthNodeFromEnd(-2));
     }
 }

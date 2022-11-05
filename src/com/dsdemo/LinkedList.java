@@ -134,6 +134,21 @@ public class LinkedList {
         first = previous;
     }
 
+    public int findKthNodeFromEnd(int k){
+        Node firstTraverser = first;
+        Node secondTraverser = first;
+        int index = 0;
+
+        while (firstTraverser != null){
+            firstTraverser = firstTraverser.next;
+            index++;
+            if(index >k){
+                secondTraverser = secondTraverser.next;
+            }
+        }
+        return secondTraverser != null ? secondTraverser.value : -1;
+    }
+
     public void print() {
         Node traverser = first;
 
