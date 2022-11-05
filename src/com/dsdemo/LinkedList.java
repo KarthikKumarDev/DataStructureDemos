@@ -149,6 +149,18 @@ public class LinkedList {
         return secondTraverser != null ? secondTraverser.value : -1;
     }
 
+    public int findMiddleNode(){
+        Node firstTraverser = first;
+        Node secondTraverser = first;
+        int index = 0;
+
+        while (firstTraverser != null && firstTraverser.next != null){
+            firstTraverser = firstTraverser.next.next;
+            secondTraverser = secondTraverser.next;
+        }
+        return secondTraverser != null ? secondTraverser.value : -1;
+    }
+
     public void print() {
         Node traverser = first;
 

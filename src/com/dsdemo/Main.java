@@ -145,6 +145,7 @@ public class Main {
 
         llist.addLast(30);
         llist.addLast(40);
+        llist.addLast(50);
         llist.reverse();
         llist.print();
 
@@ -152,5 +153,9 @@ public class Main {
         System.out.println("Find Kth Node from end");
         System.out.println(llist.findKthNodeFromEnd(3));
         System.out.println(llist.findKthNodeFromEnd(-2));
+
+        System.out.println("-----");
+        System.out.println("Find Middle Node");
+        System.out.println(llist.findMiddleNode());
     }
 }
