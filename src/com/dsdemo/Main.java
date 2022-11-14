@@ -8,7 +8,8 @@ import java.util.Arrays;
 public class Main {
     public static void main(String[] names) {
         // arrayOPS();
-        linkedList();
+        // linkedListOPS();
+        stackOPS();
     }
 
     public static void arrayOPS() {
@@ -80,7 +81,7 @@ public class Main {
         numbers.print();
     }
 
-    public static void linkedList() {
+    public static void linkedListOPS() {
 //        LinkedList llist = new LinkedList();
 //        llist.add(10);
 //        llist.add(20);
@@ -157,5 +158,15 @@ public class Main {
         System.out.println("-----");
         System.out.println("Find Middle Node");
         System.out.println(llist.findMiddleNode());
+    }
+
+    public static void stackOPS(){
+
+        StringReverser sr = new StringReverser();
+
+        String result = sr.reverse("abcd");
+
+        System.out.println(result);
+
     }
 }
