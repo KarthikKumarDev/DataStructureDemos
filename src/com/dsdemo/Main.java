@@ -162,11 +162,28 @@ public class Main {
 
     public static void stackOPS(){
 
+        System.out.println("Reverse a String");
         StringReverser sr = new StringReverser();
-
         String result = sr.reverse("abcd");
-
         System.out.println(result);
+        System.out.println("-----");
 
+        System.out.println("Is the Expression Balanced?");
+
+        Expressions expr = new Expressions("(2)");
+        expr.print();
+        System.out.println(expr.isBalanced());
+
+        Expressions expr2 = new Expressions("(2))");
+        expr2.print();
+        System.out.println(expr2.isBalanced());
+
+        Expressions expr3 = new Expressions("{<2>}");
+        expr3.print();
+        System.out.println(expr3.isBalanced());
+
+        Expressions expr4 = new Expressions("{<2>]}");
+        expr4.print();
+        System.out.println(expr4.isBalanced());
     }
 }
