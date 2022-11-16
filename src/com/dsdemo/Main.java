@@ -185,5 +185,18 @@ public class Main {
         Expressions expr4 = new Expressions("{<2>]}");
         expr4.print();
         System.out.println(expr4.isBalanced());
+
+        System.out.println("-----");
+        System.out.println("Custom Implementation");
+        System.out.println("-----");
+
+        Stack myStack = new Stack(5);
+        myStack.push(1);
+        myStack.push(2);
+        myStack.peek();
+        myStack.print();
+        var poppedValue = myStack.pop();
+        System.out.println("Popped Value: " + poppedValue);
+        myStack.print();
     }
 }
