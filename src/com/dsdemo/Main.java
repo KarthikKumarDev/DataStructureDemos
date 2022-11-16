@@ -9,7 +9,8 @@ public class Main {
     public static void main(String[] names) {
         // arrayOPS();
         // linkedListOPS();
-        stackOPS();
+        // stackOPS();
+        twoStacks();
     }
 
     public static void arrayOPS() {
@@ -198,5 +199,31 @@ public class Main {
         var poppedValue = myStack.pop();
         System.out.println("Popped Value: " + poppedValue);
         myStack.print();
+    }
+
+    public  static void twoStacks(){
+        TwoStacks stack = new TwoStacks(5);
+
+        stack.pushFirst(1);
+        stack.pushFirst(2);
+        stack.pushFirst(3);
+
+        stack.pushSecond(9);
+        stack.pushSecond(10);
+
+        System.out.println("Is the First Stack full: " + stack.isFullFirst());
+
+        stack.print();
+
+        stack.popFirst();
+        stack.popSecond();
+        stack.print();
+
+        System.out.println("Is first stack empty: " + stack.isEmptyFirst());
+        System.out.println("Is second stack empty: " + stack.isEmptySecond());
+        var poppedValue = stack.popSecond();
+        System.out.println("Popped element from Second Stack: " + poppedValue);
+
+        System.out.println("Is second stack empty: " + stack.isEmptySecond());
     }
 }
