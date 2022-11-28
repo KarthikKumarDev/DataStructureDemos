@@ -7,10 +7,11 @@ import java.util.Arrays;
 
 public class Main {
     public static void main(String[] names) {
-        // arrayOPS();
-        // linkedListOPS();
-        // stackOPS();
-        twoStacks();
+//        arrayOPS();
+//        linkedListOPS();
+//        stackOPS();
+//        twoStacks();
+        queueOPS();
     }
 
     public static void arrayOPS() {
@@ -161,7 +162,7 @@ public class Main {
         System.out.println(llist.findMiddleNode());
     }
 
-    public static void stackOPS(){
+    public static void stackOPS() {
 
         System.out.println("Reverse a String");
         StringReverser sr = new StringReverser();
@@ -201,7 +202,7 @@ public class Main {
         myStack.print();
     }
 
-    public  static void twoStacks(){
+    public static void twoStacks() {
         TwoStacks stack = new TwoStacks(5);
 
         stack.pushFirst(1);
@@ -225,5 +226,26 @@ public class Main {
         System.out.println("Popped element from Second Stack: " + poppedValue);
 
         System.out.println("Is second stack empty: " + stack.isEmptySecond());
+    }
+
+    public static void queueOPS(){
+        var myQueue = new Queue(10);
+
+        System.out.println("Is Queue Empty: " + myQueue.isEmpty());
+
+        myQueue.enqueue(10);
+        myQueue.enqueue(20);
+        myQueue.enqueue(30);
+
+        System.out.println("Is Queue Empty: " + myQueue.isEmpty());
+        System.out.println("Is Queue Full: " + myQueue.isFull());
+
+        myQueue.print();
+
+        System.out.println("Peeking the Queue: " + myQueue.peek());
+
+        System.out.println("DeQueue");
+        myQueue.dequeue();
+        myQueue.print();
     }
 }
